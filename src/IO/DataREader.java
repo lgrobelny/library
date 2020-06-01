@@ -26,6 +26,11 @@ public class DataREader {
         return new Book(title, author, yearRelease, pages, wydawnictwo, isbn);
     }
 
+    public int getInt(){
+        int number = scan.nextInt();
+        return number;
+    }
+
     public void close(){
         scan.close();
     }
