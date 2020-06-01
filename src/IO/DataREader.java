@@ -5,33 +5,34 @@ import Model.Book;
 import java.util.Scanner;
 
 public class DataREader {
-    private Scanner scan = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
 
     public Book readAndCreateBook(){
         System.out.println("Tytuł");
-        String title = scan.nextLine();
+        sc.nextLine();
+        String title = sc.nextLine();
         System.out.println("Autor");
-        String author = scan.nextLine();
+        String author = sc.nextLine();
         System.out.println("Wydawnicto");
-        String wydawnictwo = scan.nextLine();
+        String wydawnictwo = sc.nextLine();
         System.out.println("Isbn");
-        String isbn = scan.nextLine();
+        String isbn = sc.nextLine();
         System.out.println("Rok wydania");
-        int yearRelease = scan.nextInt();
-        scan.nextLine();
+        int yearRelease = sc.nextInt();
+        sc.nextLine();
         System.out.println("Liczba stron");
-        int pages = scan.nextInt();
-        scan.nextLine();
+        int pages = sc.nextInt();
+        sc.nextLine();
 
         return new Book(title, author, yearRelease, pages, wydawnictwo, isbn);
     }
 
     public int getInt(){
-        int number = scan.nextInt();
+        int number = sc.nextInt();
         return number;
     }
 
     public void close(){
-        scan.close();
+        sc.close();
     }
 }
